@@ -6,6 +6,10 @@
     },
     "loadingCaption": "Memuat...",
     "@counterAppBarTitle": {
-        "description": "Teks ini akanl pada indikator loading"
+        "description": "Teks ini akan tampil pada indikator loading"
+    },
+    "locationListAppBarTitle": "Daftar Lokasi",
+    "@locationListAppBarTitle": {
+        "description" : "Teks ini akan tampil pada appbar halaman daftar lokasi"
     }
 }

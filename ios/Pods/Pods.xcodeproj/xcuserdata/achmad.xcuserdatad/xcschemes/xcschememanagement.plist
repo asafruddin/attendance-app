@@ -29,12 +29,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>sqlite3.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>sqlite3_flutter_libs.xcscheme</key>
+		<key>path_provider_ios.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

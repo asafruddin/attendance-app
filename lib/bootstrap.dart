@@ -5,11 +5,16 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+// ignore_for_file: cascade_invocations
+
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:attendance_app/core/constant/key_constant.dart';
+import 'package:attendance_app/data/response/location_list_model.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 class AppBlocObserver extends BlocObserver {
   @override
@@ -32,6 +37,11 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
 
   await runZonedGuarded(
     () async {
+      await Hive.initFlutter();
+      Hive.registerAdapter(LocationListModelAdapter());
+      Hive.registerAdapter(LocationDataModelAdapter());
+      await Hive.openBox<LocationListModel>(KeyConstant.keyLocationBox);
+
       await BlocOverrides.runZoned(
         () async => runApp(await builder()),
         blocObserver: AppBlocObserver(),

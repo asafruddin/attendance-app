@@ -18,10 +18,10 @@
 @import google_maps_flutter;
 #endif
 
-#if __has_include(<sqlite3_flutter_libs/Sqlite3FlutterLibsPlugin.h>)
-#import <sqlite3_flutter_libs/Sqlite3FlutterLibsPlugin.h>
+#if __has_include(<path_provider_ios/FLTPathProviderPlugin.h>)
+#import <path_provider_ios/FLTPathProviderPlugin.h>
 #else
-@import sqlite3_flutter_libs;
+@import path_provider_ios;
 #endif
 
 @implementation GeneratedPluginRegistrant
@@ -29,7 +29,7 @@
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
   [GeolocatorPlugin registerWithRegistrar:[registry registrarForPlugin:@"GeolocatorPlugin"]];
   [FLTGoogleMapsPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTGoogleMapsPlugin"]];
-  [Sqlite3FlutterLibsPlugin registerWithRegistrar:[registry registrarForPlugin:@"Sqlite3FlutterLibsPlugin"]];
+  [FLTPathProviderPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTPathProviderPlugin"]];
 }
 
 @end

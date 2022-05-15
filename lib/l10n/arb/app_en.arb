@@ -7,5 +7,9 @@
     "loadingCaption": "Loading...",
     "@counterAppBarTitle": {
         "description": "Text shown in loading view"
+    },
+    "locationListAppBarTitle": "Location List",
+    "@locationListAppBarTitle": {
+        "description" : "Text shown in the AppBar of the location list"
     }
 }
