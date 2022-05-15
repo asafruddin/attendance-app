@@ -1,7 +1,11 @@
 {
     "@@locale": "en",
-    "counterAppBarTitle": "Counter",
+    "mapAppBarTitle": "Maps",
     "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
+        "description": "Text shown in the AppBar of the Maps Page"
+    },
+    "loadingCaption": "Loading...",
+    "@counterAppBarTitle": {
+        "description": "Text shown in loading view"
     }
 }

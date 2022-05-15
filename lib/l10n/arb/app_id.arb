@@ -1,0 +1,11 @@
+{
+    "@@locale": "id",
+    "mapAppBarTitle": "Peta",
+    "@counterAppBarTitle": {
+        "description": "Teks akan tampil di appbar halaman peta"
+    },
+    "loadingCaption": "Memuat...",
+    "@counterAppBarTitle": {
+        "description": "Teks ini akanl pada indikator loading"
+    }
+}

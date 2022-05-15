@@ -6,7 +6,7 @@
 // https://opensource.org/licenses/MIT.
 
 import 'package:attendance_app/l10n/l10n.dart';
-import 'package:attendance_app/presentation/counter/counter.dart';
+import 'package:attendance_app/presentation/maps/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 

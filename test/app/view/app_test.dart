@@ -6,7 +6,7 @@
 // https://opensource.org/licenses/MIT.
 
 import 'package:attendance_app/app/app.dart';
-import 'package:attendance_app/presentation/counter/counter.dart';
+import 'package:attendance_app/presentation/maps/counter.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
