@@ -54,34 +54,34 @@ class _LocationListPageState extends State<LocationListPage> {
                         builder: (context) => const AddLocationPage()))
                 .then((dynamic value) => box.get(KeyConstant.keyLocationBox)),
             child: const Icon(Icons.add)),
-        body: location == null
-            ? const Center(
-                child: Text('Location is empty'),
-              )
-            : ValueListenableBuilder(
-                valueListenable: box.listenable(),
-                builder: (context, value, widget) {
-                  final locList = box.get(KeyConstant.keyLocationBox);
+        body: ValueListenableBuilder(
+            valueListenable: box.listenable(),
+            builder: (context, value, widget) {
+              final locList = box.get(KeyConstant.keyLocationBox);
 
-                  return ListView.separated(
-                      itemBuilder: (context, index) {
-                        return ListTile(
-                          trailing: const Icon(Icons.chevron_right_rounded),
-                          title: Text(
-                              locList?.locationList?[index].locationName ?? ''),
-                          onTap: () => Navigator.push<dynamic>(
-                              context,
-                              MaterialPageRoute<dynamic>(
-                                builder: (context) => MapPage(
-                                  latLng: LatLng(
-                                      locList!.locationList![index].latitude!,
-                                      locList.locationList![index].longitude!),
-                                ),
-                              )),
-                        );
-                      },
-                      separatorBuilder: (_, i) => const SizedBox(),
-                      itemCount: locList?.locationList?.length ?? 0);
-                }));
+              if (locList == null) {
+                return const Center(child: Text('Location is empty'));
+              }
+
+              return ListView.separated(
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      trailing: const Icon(Icons.chevron_right_rounded),
+                      title:
+                          Text(locList.locationList?[index].locationName ?? ''),
+                      onTap: () => Navigator.push<dynamic>(
+                          context,
+                          MaterialPageRoute<dynamic>(
+                            builder: (context) => MapPage(
+                              latLng: LatLng(
+                                  locList.locationList![index].latitude!,
+                                  locList.locationList![index].longitude!),
+                            ),
+                          )),
+                    );
+                  },
+                  separatorBuilder: (_, i) => const SizedBox(),
+                  itemCount: locList.locationList?.length ?? 0);
+            }));
   }
 }
