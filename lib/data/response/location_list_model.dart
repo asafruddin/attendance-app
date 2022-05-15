@@ -19,9 +19,9 @@ class LocationDataModel extends Equatable {
   const LocationDataModel({this.longitude, this.latitude, this.locationName});
 
   @HiveField(0)
-  final String? longitude;
+  final double? longitude;
   @HiveField(1)
-  final String? latitude;
+  final double? latitude;
   @HiveField(2)
   final String? locationName;
 

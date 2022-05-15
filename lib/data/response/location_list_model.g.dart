@@ -51,8 +51,8 @@ class LocationDataModelAdapter extends TypeAdapter<LocationDataModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return LocationDataModel(
-      longitude: fields[0] as String?,
-      latitude: fields[1] as String?,
+      longitude: fields[0] as double?,
+      latitude: fields[1] as double?,
       locationName: fields[2] as String?,
     );
   }

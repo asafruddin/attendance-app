@@ -5,7 +5,7 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
-import 'package:attendance_app/presentation/maps/counter.dart';
+import 'package:attendance_app/presentation/maps/maps.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,8 +19,8 @@ class MockCounterCubit extends MockCubit<int> implements CounterCubit {}
 void main() {
   group('CounterPage', () {
     testWidgets('renders CounterView', (tester) async {
-      await tester.pumpApp(const CounterPage());
-      expect(find.byType(CounterView), findsOneWidget);
+      await tester.pumpApp(const MapPage());
+      expect(find.byType(MapPageView), findsOneWidget);
     });
   });
 
@@ -37,7 +37,7 @@ void main() {
       await tester.pumpApp(
         BlocProvider.value(
           value: counterCubit,
-          child: const CounterView(),
+          child: const MapPageView(),
         ),
       );
       expect(find.text('$state'), findsOneWidget);
@@ -50,7 +50,7 @@ void main() {
       await tester.pumpApp(
         BlocProvider.value(
           value: counterCubit,
-          child: const CounterView(),
+          child: const MapPageView(),
         ),
       );
       await tester.tap(find.byIcon(Icons.add));
@@ -64,7 +64,7 @@ void main() {
       await tester.pumpApp(
         BlocProvider.value(
           value: counterCubit,
-          child: const CounterView(),
+          child: const MapPageView(),
         ),
       );
       await tester.tap(find.byIcon(Icons.remove));
