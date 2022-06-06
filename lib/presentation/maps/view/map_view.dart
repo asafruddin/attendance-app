@@ -79,8 +79,8 @@ class _MapViewState extends State<MapView> {
               decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(8),
-                      topRight: Radius.circular(8))),
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10))),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
