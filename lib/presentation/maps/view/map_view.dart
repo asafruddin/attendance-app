@@ -92,7 +92,7 @@ class _MapViewState extends State<MapView> {
                   if (widget.latLng == null)
                     ElevatedButton(
                       onPressed: () {
-                        var list = locationData;
+                        final list = locationData;
                         // ignore: cascade_invocations
                         list.add(LocationDataModel(
                             latitude: _lastPos.latitude,

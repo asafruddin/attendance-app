@@ -80,7 +80,7 @@ class _LocationListPageState extends State<LocationListPage> {
                           )),
                     );
                   },
-                  separatorBuilder: (_, i) => const SizedBox(),
+                  separatorBuilder: (_, i) => const Divider(height: 0),
                   itemCount: locList.locationList?.length ?? 0);
             }));
   }

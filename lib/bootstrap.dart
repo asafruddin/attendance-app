@@ -11,6 +11,7 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:attendance_app/core/constant/key_constant.dart';
+import 'package:attendance_app/data/response/attendance_list_model.dart';
 import 'package:attendance_app/data/response/location_list_model.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
@@ -40,7 +41,11 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
       await Hive.initFlutter();
       Hive.registerAdapter(LocationListModelAdapter());
       Hive.registerAdapter(LocationDataModelAdapter());
+      Hive.registerAdapter(AttendanceHistoryListModelAdapter());
+      Hive.registerAdapter(HistoryListDataAdapter());
       await Hive.openBox<LocationListModel>(KeyConstant.keyLocationBox);
+      await Hive.openBox<AttendanceHistoryListModel>(
+          KeyConstant.keyAttendanceHistoryBox);
 
       await BlocOverrides.runZoned(
         () async => runApp(await builder()),
